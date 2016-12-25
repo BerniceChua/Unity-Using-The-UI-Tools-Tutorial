@@ -1828,11 +1828,6 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 385589736}
-    - target: {fileID: 82828414905651002, guid: 979add01735e70a4283d77eae4070ca7,
-        type: 2}
-      propertyPath: Mute
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 979add01735e70a4283d77eae4070ca7, type: 2}
   m_IsPrefabParent: 0
