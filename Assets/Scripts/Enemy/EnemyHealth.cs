@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
 
+    public Sprite icon;
+    //public Slider enemyHealthSlider;
 
     Animator anim;
     AudioSource enemyAudio;
