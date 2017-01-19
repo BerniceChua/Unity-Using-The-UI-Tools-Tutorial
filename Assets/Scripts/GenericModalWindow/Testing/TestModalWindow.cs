@@ -61,12 +61,20 @@ public class TestModalWindow : MonoBehaviour {
         //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", myOkAction, icon);
         //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", TestOkFunction, icon);
 
+        /*
         ModalPanelDetails modalPanelDetails = new ModalPanelDetails();
         modalPanelDetails.question = "This icon was from the Survival Shooter tutorial.";
         modalPanelDetails.button1Details = new EventButtonDetails();
         modalPanelDetails.iconImage = icon;
         modalPanelDetails.button1Details.buttonTitle = "OK";
         modalPanelDetails.button1Details.action = TestOkFunction;
+        */
+        // refactor this to be an initializer list -- make custom initializer with new ModalPanelDetails{} instead of new ModalPanelDetails().
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails {
+            question = "This icon was from the Survival Shooter tutorial.",
+            iconImage = icon,
+            button1Details = new EventButtonDetails { buttonTitle = "OK", action = TestOkFunction }
+        };
 
         modalPanel.NewChoice(modalPanelDetails);
     }
