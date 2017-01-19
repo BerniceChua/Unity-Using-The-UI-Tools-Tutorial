@@ -45,7 +45,38 @@ public class TestModalWindow : MonoBehaviour {
 
     // Send to the Modal Panel to set up the Buttons and Functions to call (with Image!!)
     public void TestAnnouncement() {
-        modalPanel.ResponseChoice("You will get through this", myOkAction);
+        //modalPanel.ResponseChoice("You will get through this", myOkAction);
+        //modalPanel.ResponseChoice("You will get through this", TestOkFunction);
+
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails();
+        modalPanelDetails.question = "You will get through this";
+        modalPanelDetails.button1Details = new EventButtonDetails();
+        modalPanelDetails.button1Details.buttonTitle = "OK";
+        modalPanelDetails.button1Details.action = TestOkFunction;
+
+        modalPanel.NewChoice(modalPanelDetails);
+    }
+
+    public void TestAnnouncementWithIcon() {
+        //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", myOkAction, icon);
+        //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", TestOkFunction, icon);
+
+        /*
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails();
+        modalPanelDetails.question = "This icon was from the Survival Shooter tutorial.";
+        modalPanelDetails.button1Details = new EventButtonDetails();
+        modalPanelDetails.iconImage = icon;
+        modalPanelDetails.button1Details.buttonTitle = "OK";
+        modalPanelDetails.button1Details.action = TestOkFunction;
+        */
+        // refactor this to be an initializer list -- make custom initializer with new ModalPanelDetails{} instead of new ModalPanelDetails().
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails {
+            question = "This icon was from the Survival Shooter tutorial.",
+            iconImage = icon,
+            button1Details = new EventButtonDetails { buttonTitle = "OK", action = TestOkFunction }
+        };
+
+        modalPanel.NewChoice(modalPanelDetails);
     }
 
     // Send to the Modal Panel to set up the Buttons and Functions to call (with Image!!)
@@ -63,7 +94,25 @@ public class TestModalWindow : MonoBehaviour {
     }
 
     public void Test3Lambdas() {
-        modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, TestNoFunction);
+
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails {
+            question = "Do you want to create 3 spheres?",
+            button1Details = new EventButtonDetails {
+                buttonTitle = "Yes, please!",
+                action = () => {
+                    InstantiateObject(thingToSpawn, thingToSpawn);
+                    InstantiateObject(thingToSpawn);
+                }
+            },
+            button2Details = new EventButtonDetails {
+                buttonTitle = "No",
+                action = TestNoFunction
+            }
+        };
+
+        modalPanel.NewChoice(modalPanelDetails);
     }
 
     public void Test4Lambdas() {
@@ -71,7 +120,8 @@ public class TestModalWindow : MonoBehaviour {
     }
 
     public void Test5Lambdas() {
-        modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, myNoAction);
+        modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, TestNoFunction);
     }
 
     // These are wrapped into UnityActions
