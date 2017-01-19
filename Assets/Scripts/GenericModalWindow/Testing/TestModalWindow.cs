@@ -48,6 +48,10 @@ public class TestModalWindow : MonoBehaviour {
         modalPanel.ResponseChoice("You will get through this", myOkAction);
     }
 
+    public void TestAnnouncementWithIcon() {
+        modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", myOkAction, icon);
+    }
+
     // Send to the Modal Panel to set up the Buttons and Functions to call (with Image!!)
     public void TestYesNo() {
         modalPanel.ResponseChoice("Am I awesome yet?", myYesAction, myNoAction);

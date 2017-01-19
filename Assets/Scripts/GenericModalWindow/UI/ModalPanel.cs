@@ -98,8 +98,10 @@ public class ModalPanel : MonoBehaviour {
         okButton.gameObject.SetActive(false);
     }
 
+    /*
+     * commenting this out, to show how to use optional parameters in the new version
     /// <summary>
-    /// An announcement: a string and a Cancel event.
+    /// An announcement: a string and a Cancel/ok event.
     /// </summary>
     /// <param name="question"></param>
     /// <param name="okEvent"></param>
@@ -114,6 +116,48 @@ public class ModalPanel : MonoBehaviour {
         this.question.text = question;
 
         this.iconImage.gameObject.SetActive(false);
+        yesButton.gameObject.SetActive(false);
+        noButton.gameObject.SetActive(false);
+        cancelButton.gameObject.SetActive(false);
+        okButton.gameObject.SetActive(true);
+    }
+
+    public void ResponseChoice(string question, Sprite iconImage, UnityAction okEvent) {
+        modalPanelObject.SetActive(true);
+
+        okButton.onClick.RemoveAllListeners();
+        // the AddListeners will do whatever is in the parentheses.
+        okButton.onClick.AddListener(okEvent);
+        okButton.onClick.AddListener(ClosePanel);
+
+        this.question.text = question;
+        this.iconImage.sprite = iconImage;
+
+        this.iconImage.gameObject.SetActive(true);
+        yesButton.gameObject.SetActive(false);
+        noButton.gameObject.SetActive(false);
+        cancelButton.gameObject.SetActive(false);
+        okButton.gameObject.SetActive(true);
+    }
+    */
+
+    public void ResponseChoice(string question, UnityAction okEvent, Sprite iconImage = null) {
+        modalPanelObject.SetActive(true);
+
+        okButton.onClick.RemoveAllListeners();
+        // the AddListeners will do whatever is in the parentheses.
+        okButton.onClick.AddListener(okEvent);
+        okButton.onClick.AddListener(ClosePanel);
+
+        this.question.text = question;
+
+        if (iconImage) {
+            this.iconImage.sprite = iconImage;
+            this.iconImage.gameObject.SetActive(true);
+        } else {
+            this.iconImage.gameObject.SetActive(false);
+        }
+        
         yesButton.gameObject.SetActive(false);
         noButton.gameObject.SetActive(false);
         cancelButton.gameObject.SetActive(false);
