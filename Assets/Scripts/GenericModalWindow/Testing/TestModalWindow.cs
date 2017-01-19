@@ -94,7 +94,25 @@ public class TestModalWindow : MonoBehaviour {
     }
 
     public void Test3Lambdas() {
-        modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 3 spheres?", () => { InstantiateObject(thingToSpawn, thingToSpawn); InstantiateObject(thingToSpawn); }, TestNoFunction);
+
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails {
+            question = "Do you want to create 3 spheres?",
+            button1Details = new EventButtonDetails {
+                buttonTitle = "Yes, please!",
+                action = () => {
+                    InstantiateObject(thingToSpawn, thingToSpawn);
+                    InstantiateObject(thingToSpawn);
+                }
+            },
+            button2Details = new EventButtonDetails {
+                buttonTitle = "No",
+                action = TestNoFunction
+            }
+        };
+
+        modalPanel.NewChoice(modalPanelDetails);
     }
 
     public void Test4Lambdas() {
@@ -102,7 +120,8 @@ public class TestModalWindow : MonoBehaviour {
     }
 
     public void Test5Lambdas() {
-        modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, myNoAction);
+        //modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, myNoAction);
+        modalPanel.ResponseChoice("Do you want to create 5 spheres?", () => { int spawnCount = 5; for (int i = 0; i < spawnCount; i++) { InstantiateObject(thingToSpawn, spawnCount); } }, TestNoFunction);
     }
 
     // These are wrapped into UnityActions
