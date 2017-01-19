@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class PlayerShooting : MonoBehaviour
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
 
+    public Slider ammoSlider;
+    public int maxBullets;
+    private int currentBullets;
 
     float timer;
     Ray shootRay = new Ray();
@@ -25,6 +29,8 @@ public class PlayerShooting : MonoBehaviour
         gunLine = GetComponent <LineRenderer> ();
         gunAudio = GetComponent<AudioSource> ();
         gunLight = GetComponent<Light> ();
+
+        currentBullets = maxBullets;
     }
 
 
@@ -54,6 +60,11 @@ public class PlayerShooting : MonoBehaviour
     void Shoot ()
     {
         timer = 0f;
+
+        if (currentBullets <= 0) return;
+
+        currentBullets -= 1;
+        ammoSlider.value = currentBullets;
 
         gunAudio.Play ();
 
