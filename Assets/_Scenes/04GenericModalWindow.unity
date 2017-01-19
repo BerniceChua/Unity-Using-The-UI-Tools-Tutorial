@@ -283,13 +283,13 @@ RectTransform:
   - {fileID: 659499149}
   - {fileID: 1801733753}
   - {fileID: 1693915085}
+  - {fileID: 1490151531}
   - {fileID: 309445587}
   - {fileID: 1792544763}
   - {fileID: 722344657}
   - {fileID: 2004077279}
   - {fileID: 1282377438}
   - {fileID: 168355054}
-  - {fileID: 1490151531}
   m_Father: {fileID: 407002835}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -403,7 +403,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -676,6 +676,12 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &208806316 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
+    type: 2}
+  m_PrefabInternal: {fileID: 1909145093}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &309445586
 Prefab:
   m_ObjectHideFlags: 0
@@ -726,7 +732,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -897,6 +903,12 @@ MonoBehaviour:
   icon: {fileID: 0}
   spawnpoint: {fileID: 0}
   thingToSpawn: {fileID: 0}
+--- !u!114 &350430452 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
+    type: 2}
+  m_PrefabInternal: {fileID: 1089430194}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &407002831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1091,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 426885092}
+--- !u!114 &479893170 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
+    type: 2}
+  m_PrefabInternal: {fileID: 1479046872}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &483203571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1553,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -1869,7 +1887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1842693788169186, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: CancelButton
+      value: Button3
       objectReference: {fileID: 0}
     - target: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -1878,7 +1896,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1949236756451412, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: CancelText
+      value: Text3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e39cc212779ea724f9209e649aae6887, type: 2}
@@ -2104,7 +2122,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -2500,7 +2518,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1842693788169186, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: NoButton
+      value: Button2
       objectReference: {fileID: 0}
     - target: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -2509,7 +2527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1949236756451412, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: NoText
+      value: Text2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e39cc212779ea724f9209e649aae6887, type: 2}
@@ -2569,7 +2587,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -2951,11 +2969,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1842693788169186, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: YesButton
+      value: Button1
       objectReference: {fileID: 0}
     - target: {fileID: 1949236756451412, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: YesText
+      value: Text1
       objectReference: {fileID: 0}
     - target: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -3281,6 +3299,12 @@ MonoBehaviour:
   icon: {fileID: 0}
   spawnpoint: {fileID: 0}
   thingToSpawn: {fileID: 0}
+--- !u!114 &1745121960 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
+    type: 2}
+  m_PrefabInternal: {fileID: 1673226452}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1792544762
 Prefab:
   m_ObjectHideFlags: 0
@@ -3331,7 +3355,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -3731,6 +3755,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1687457342}
     m_Modifications:
+    - target: {fileID: 114300334320467644, guid: e39cc212779ea724f9209e649aae6887,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -3823,7 +3852,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1842693788169186, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: OkButton
+      value: Button4
       objectReference: {fileID: 0}
     - target: {fileID: 114559695360079406, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -3832,7 +3861,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1949236756451412, guid: e39cc212779ea724f9209e649aae6887, type: 2}
       propertyPath: m_Name
-      value: OkText
+      value: Text4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114300334320467644, guid: e39cc212779ea724f9209e649aae6887,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114300334320467644, guid: e39cc212779ea724f9209e649aae6887,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e39cc212779ea724f9209e649aae6887, type: 2}
@@ -3990,7 +4029,7 @@ Prefab:
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224001791305125598, guid: e39cc212779ea724f9209e649aae6887,
         type: 2}
@@ -4275,10 +4314,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: {fileID: 589104299}
   iconImage: {fileID: 426885095}
-  yesButton: {fileID: 534413623}
-  noButton: {fileID: 1383165623}
-  cancelButton: {fileID: 18075021}
-  okButton: {fileID: 2103562298}
+  button1: {fileID: 534413623}
+  button2: {fileID: 1383165623}
+  button3: {fileID: 18075021}
+  button4: {fileID: 2103562298}
+  button1Text: {fileID: 1745121960}
+  button2Text: {fileID: 479893170}
+  button3Text: {fileID: 350430452}
+  button4Text: {fileID: 208806316}
   modalPanelObject: {fileID: 1491163263}
 --- !u!4 &2021184788
 Transform:

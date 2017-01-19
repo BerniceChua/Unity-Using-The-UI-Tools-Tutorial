@@ -45,11 +45,30 @@ public class TestModalWindow : MonoBehaviour {
 
     // Send to the Modal Panel to set up the Buttons and Functions to call (with Image!!)
     public void TestAnnouncement() {
-        modalPanel.ResponseChoice("You will get through this", myOkAction);
+        //modalPanel.ResponseChoice("You will get through this", myOkAction);
+        //modalPanel.ResponseChoice("You will get through this", TestOkFunction);
+
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails();
+        modalPanelDetails.question = "You will get through this";
+        modalPanelDetails.button1Details = new EventButtonDetails();
+        modalPanelDetails.button1Details.buttonTitle = "OK";
+        modalPanelDetails.button1Details.action = TestOkFunction;
+
+        modalPanel.NewChoice(modalPanelDetails);
     }
 
     public void TestAnnouncementWithIcon() {
-        modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", myOkAction, icon);
+        //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", myOkAction, icon);
+        //modalPanel.ResponseChoice("This icon was from the Survival Shooter tutorial.", TestOkFunction, icon);
+
+        ModalPanelDetails modalPanelDetails = new ModalPanelDetails();
+        modalPanelDetails.question = "This icon was from the Survival Shooter tutorial.";
+        modalPanelDetails.button1Details = new EventButtonDetails();
+        modalPanelDetails.iconImage = icon;
+        modalPanelDetails.button1Details.buttonTitle = "OK";
+        modalPanelDetails.button1Details.action = TestOkFunction;
+
+        modalPanel.NewChoice(modalPanelDetails);
     }
 
     // Send to the Modal Panel to set up the Buttons and Functions to call (with Image!!)
