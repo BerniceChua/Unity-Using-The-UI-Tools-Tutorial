@@ -9,6 +9,12 @@ public class PlayerShooting : MonoBehaviour
 
     public Slider ammoSlider;
     public int maxBullets;
+
+    public Image enemyIcon;
+    public Slider enemyHealthSlider;
+
+    private GameObject enemyHealthObject;
+
     private int currentBullets;
 
     float timer;
@@ -31,6 +37,11 @@ public class PlayerShooting : MonoBehaviour
         gunLight = GetComponent<Light> ();
 
         currentBullets = maxBullets;
+
+        enemyIcon.enabled = false;
+
+        enemyHealthObject = enemyHealthSlider.gameObject;
+        enemyHealthObject.SetActive(false);
     }
 
 
@@ -85,7 +96,18 @@ public class PlayerShooting : MonoBehaviour
             if(enemyHealth != null)
             {
                 enemyHealth.TakeDamage (damagePerShot, shootHit.point);
+
+                enemyIcon.enabled = true;
+                enemyIcon.sprite = enemyHealth.icon;
+
+                enemyHealthObject.SetActive(true);
+                enemyHealthSlider.value = enemyHealth.currentHealth;
+            } else {
+                enemyIcon.enabled = false;
+
+                enemyHealthObject.SetActive(false);
             }
+
             gunLine.SetPosition (1, shootHit.point);
         }
         else
